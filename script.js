@@ -9,9 +9,11 @@
     // Hier kun je jouw classes aan geluiden en afbeeldingen koppelen
 
     const sounds = {
-        "Wakker": new Audio("my_sounds/mars.mp3"),
-        "Slapen": new Audio("my_sounds/snickers.mp3"),
-        "Gevoed": new Audio("my_sounds/milkyway.mp3")
+        "Default": new Audio("my_sounds/Cat-Meow.wav"),
+        "Wakker": new Audio("my_sounds/Cat-Meow.wav"),
+        "Slapen": new Audio("my_sounds/sleepingCat.wav"),
+        "Eten": new Audio("my_sounds/fedCat.wav"),
+        "Drinken": new Audio("my_sounds/fedCat.wav")
     };
 
     const images = {
