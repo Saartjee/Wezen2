@@ -7,7 +7,8 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background-image: url("my_images/background.jpg");
+    background-color: black;
+    /*background-image: url("my_images/background.jpg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
