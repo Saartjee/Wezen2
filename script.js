@@ -9,7 +9,6 @@
     // Hier kun je jouw classes aan geluiden en afbeeldingen koppelen
 
     const sounds = {
-        "Default": new Audio("my_sounds/Cat-Meow.wav"),
         "Wakker": new Audio("my_sounds/Cat-Meow.wav"),
         "Slapen": new Audio("my_sounds/sleepingCat.wav"),
         "Eten": new Audio("my_sounds/fedCat.wav"),
@@ -20,8 +19,7 @@
         "Wakker": "my_images/Wakker.png",
         "Slapen": "my_images/Slapen.png",
         "Eten": "my_images/Gevoed.png",
-        "Drinken": "my_images/Gevoed.png",
-        "Default": "my_images/Default.png"
+        "Drinken": "my_images/Gevoed.png"
     };
 
     // ---
@@ -43,7 +41,7 @@
     let lastNeutralTime = 0;
 
     const imageDiv = document.getElementById("image-display");
-    imageDiv.innerHTML = `<img src="${images["Default"]}" alt="Default">`;
+    imageDiv.innerHTML = `<img src="${images["Slapen"]}" alt="Slapen">`;
 
     try {
         webcam = new tmImage.Webcam(400, 300, true, { facingMode: "user" });
@@ -93,7 +91,7 @@
             if (avgProb < confidenceThreshold) {
                 if (!currentDetectedClass || now - lastNeutralTime > neutralHoldDuration) {
                     document.getElementById("prediction").innerText = "No detection";
-                    imageDiv.innerHTML = `<img src="${images["Default"]}" alt="Default">`;
+                    imageDiv.innerHTML = `<img src="${images["Slapen"]}" alt="Slapen">`;
                     currentDetectedClass = null;
                     lastNeutralTime = now;
                 }
